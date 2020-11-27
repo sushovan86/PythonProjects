@@ -8,7 +8,8 @@ from process_split import *
 
 def validate_column(df, column):
     if column not in df.columns:
-        print("ERROR!!! Column {} is not available in the spreadsheet"
+        print("ERROR!!! Column {} is not available in the spreadsheet. "
+              "Please provide correct column name"
               .format(column))
         exit(-1)
 
