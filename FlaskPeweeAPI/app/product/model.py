@@ -1,7 +1,8 @@
 import peewee as pw
 from marshmallow import fields
+from marshmallow_peewee import ModelSchema
 
-from app import BaseModel, BaseScheme
+from app import BaseModel
 
 
 class Product(BaseModel):
@@ -11,7 +12,7 @@ class Product(BaseModel):
     price = pw.FloatField(column_name="price")
 
 
-class ProductSchema(BaseScheme):
+class ProductSchema(ModelSchema):
     class Meta:
         model = Product
 
